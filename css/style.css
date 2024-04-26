@@ -1,0 +1,459 @@
+/*Colores:
+#455699
+#cba9c7*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --main-color: #f5f5f5;
+    --secondary-color: #cba9c7;
+    --third-color: #455699;
+}
+
+body {
+    background-color: var(--third-color);
+    color: var(--main-color);
+}
+
+/*Estilos generales*/
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+
+header,
+footer {
+    background-image: linear-gradient(to top, #cba9c7, #b191ba, #937baf, #7068a4, #455699);
+    padding: 20px;
+}
+
+.header {
+    height: 10vh;
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo img {
+            height: 30px;
+            margin-right: 20px;
+        }
+        a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: var(--main-color);
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            column-gap: 20px;
+            a {
+                text-decoration: none;
+                color: whitesmoke;
+            }
+            li {
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+        ul li:last-child a {
+            background-color: var(--third-color);
+            color: var(--main-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            border: 1px solid #455699;
+        }
+    }
+}
+
+/*Main
+Seccción principal*/
+.sectionprincipal {
+    height: 85vh;
+    overflow: hidden;
+    background-image: url(../assets/img/portada.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .tituloPrincipal {
+        margin-bottom: 10px;
+    }
+    .subtituloPrincipal {
+        margin-bottom: 20px;
+    }
+    .botonRegistrarse {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        text-decoration: none;
+        background-color: var(--third-color);
+        color: var(--main-color);
+        border-radius: 5px;
+    }
+}
+
+.sectionBuscador {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 30px;  
+    .placeholder {
+        padding: 0 10px;
+        border: 2px solid var(--secondary-color);
+        border-radius: 15px;
+        background-color: var(--main-color);
+        font-size: 1.6rem;
+        margin-right: 20px;
+    }
+
+    .botonBuscar {
+        font-size: 1.8rem;
+        background-color: #b191ba;
+        color: var(--main-color);
+        padding: 0 10px;
+        border-radius: 15px;
+        margin: 30px 0;
+    }
+
+}
+/*Estilos de la sección Tendencias*/
+.sectionTendencias {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    .contenedorTendencias {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 20px;
+        div {
+            width: 250px;
+            height: 350px;
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: 5px 5px 5px 5px rgba(231, 178, 237, 0.75);
+            }
+        }
+        div :hover {
+            transform: scale(1.2);
+        }
+    }
+    .contenedorBotones {
+        button {
+        border: 2px solid var(--secondary-color);
+        font-size: 1.2rem;
+        border-radius: 15px;
+        padding: 5px 10px;
+        background: linear-gradient(to top, #cba9c7, #b191ba, #937baf, #7068a4, #455699);
+        color: var(--main-color);
+        margin: 0 5px;
+        margin-bottom: 50px;
+        }
+
+    }
+}
+/*Estilos de la sección de peliculas más aclamadas*/
+.sectionAclamadas ::-webkit-scrollbar{
+    width: 5px;
+    background: var(--third-color);
+}
+.sectionAclamadas ::-webkit-scrollbar-thumb{
+    background: var(--secondary-color);
+    border-radius:5px ;
+}
+.sectionAclamadas{ 
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    h2{
+        margin-bottom: 30px;
+    }
+    .contenedorAclamadas{
+         display: flex;
+         overflow-x: scroll;
+         overflow-y: hidden;
+         gap: 20px;         
+         img{
+            border-radius: 5px;
+        }
+    }    
+}
+.footer{
+    margin-top: 10px;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    nav{        
+        ul{
+            li{
+                display: inline-block;
+                list-style: none;
+                margin-left: 20px;                         
+                a{
+                    text-decoration: none;
+                    color: var(--main-color);
+                    font-weight: bold;
+                    font-size: 1rem;                  
+                }
+                
+            }
+        }        
+    }
+    .contenedorIconoArriba{
+        margin-left: 20px;
+        .iconoArriba{
+            color: var(--main-color);
+        }
+    }
+}
+/*Estilos de la pagina detalle*/
+.sectionDetalle{ 
+    height: 80vh;
+    background: linear-gradient(to right top, #6d6969a7, #979595a7),url(../assets/img/banner-detalle.jpg);
+    background-size: cover;
+    background-position: center;        
+    display: flex;
+    .contenedorDetalle{ 
+        width: 75%;
+        margin: 0 auto;
+        display: flex;  
+        justify-content:center;
+        align-items: center;
+        column-gap: 50px;
+        .contenedorImg img {
+            border-radius: 10px;
+        }
+        h2{
+            color: var(--main-color);
+            font-weight: 800;
+        }         
+    }
+} 
+          
+.sectionTrailer{
+    color: white;
+    margin-bottom: 150px;
+    margin-top: 100px;
+    display:flex;
+    justify-content: center; 
+    align-items: center;
+    column-gap: 50px;
+    .contenedorInfo{
+        .redes{
+            ul{
+                display: flex;
+                list-style: none;
+                column-gap: 20px;
+                padding-bottom: 120px;
+                a{
+                    color: var(--main-color);
+                    font-size: 1.6rem;
+                    margin-right: 60px;
+                }
+            }
+        }
+        .tabla{            
+            width: 100%;           
+            th, td{
+                padding: 5px;
+                width: 25%;
+                font-weight: bold;
+                }
+            }
+        }
+    }
+/*Estilos de página de registo*/
+.header{
+    background: var(--secondary-color);
+    a{
+        text-decoration: none;
+        color: var(--main-color);
+    }
+}
+.sectionForm{
+    height: 100vh;
+    background: url(../assets/img/banner-regristro.jpg);    
+    opacity: 0.75;  
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;        
+    flex-direction: column;
+    .terminos{
+        width: 60%;
+        margin: 0 auto;
+        font-size: 0.6rem;
+        display: inline-flex;
+        margin-top: 10px;
+    }
+    .form input{    
+        width: 100%;
+        border: 1px solid var(--secondary-color);
+        border-radius: 10px;
+        padding: 5px 10px;
+        margin: 5px 0;
+        box-shadow: 5px 5px 5px 0px rgba(231,178,237,0.75);
+        &:focus {
+            border: 2px solid deeppink;
+            background: lightcyan;
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+          }
+    }
+    
+    .botonRegistro {
+        color: var(--main-color);
+        border: 2px solid var(--third-color);
+        font-size: 1.2rem;
+        padding: auto;
+        background-color: var(--third-color);
+    }
+    
+   
+}
+
+
+/*Medias Query*/
+@media screen and (min-width: 601px) and (max-width: 992px){
+    .header {
+     height: 10vh;  
+     top: 0; 
+     left: 0; 
+     right: 0; 
+     z-index: 10;
+    }
+    .sectionDetalle {
+     height: 100vh; 
+     display: flex; 
+     justify-content: center; 
+     align-items: center; 
+     .contenedorDetalle {
+         width: 90%; 
+         text-align: center; 
+     }
+     }
+     .sectionTrailer {
+         flex-direction: column; 
+         align-items: center; 
+         .contenedorInfo {
+             margin-top: 30px; 
+         }
+         
+     }
+     .footer{
+         height: 10vh;
+     }
+ }
+ 
+@media screen and (max-width:600px) {
+    h1{
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }    
+    h2{
+        font-size: 1.2rem;
+        font-weight: 200;
+        margin-bottom: 10px;
+    }    
+    h3{
+        font-size: 1rem;
+        font-weight: 200;
+    }
+    .header{
+        height: initial;
+        padding: 5px;
+        .nav{
+            flex-direction: column;
+            align-items: flex-start;  
+            a{
+                font-size: 1rem;
+            }      
+        }         
+        .logo{
+            padding-left: 10px;
+        }  
+        .nav ul{
+            margin-top: 10px; 
+        }
+        .nav ul li:last-child a{
+            padding: 5px; 
+            font-size: 0.8rem; 
+    }
+    }
+    .sectionprincipal{
+        .botonRegistrarse{
+            font-size: 1rem;
+        }
+    }
+    .sectionBuscador {
+        .placeholder {
+            font-size: 1rem;
+        }    
+        .botonBuscar {
+            font-size: 1rem;
+        }
+    }
+    audio{
+        visibility: hidden;
+    }
+    .sectionDetalle{
+        height: auto;
+        .contenedorDetalle{
+            height: auto;
+            column-gap: 10px;
+            width: 90%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;            
+            
+        }        
+    }
+    .sectionTrailer{
+        display: flex;
+        flex-direction: column;
+        iframe{
+            width:350px;
+            height: 350px;
+        }  
+        .contenedorInfo{
+            width: 350px;
+            height: 350px;
+            margin-top: 30px; 
+            }
+        }
+}
+

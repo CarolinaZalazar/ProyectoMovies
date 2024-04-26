@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodoFlix | Catalogo de Peliculas</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d3e330292b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header" id="principal">
+        <nav class="nav">
+            <div>
+              <img class="logo" src="./favicon.ico" alt="Logo">
+              <a href="">CodoFlix</a>
+            </div>
+            <ul>
+                <li><a href="#tendencias">Tendencias</a></li>
+                <li><a href="./pages/registrarse.html">Registrarse</a></li>
+                <li><a href="./pages/iniciosesion.html">Iniciar Sesión</a></li>
+                
+               </ul>
+        </nav>
+    </header>
+    <main>
+      <section class="sectionprincipal">
+        <h1 class="tituloPrincipal">Películas y series ilimitadas <br>en un solo lugar</h1>
+          <h2 class="subtituloPrincipal">Disfruta donde quieras <br>
+          Cancela en cualquier momento.</h2>
+          <div>            
+            <a class="botonRegistrarse" href="./pages/registrarse.html">Registrate</a>
+          </div>
+      </section>
+
+      <section class="sectionBuscador">
+        <h2>¿Qué estas buscando para ver?</h2>
+        <form>
+          <input type="text" placeholder="Buscar.."id="buscar"name="buscar"class="placeholder" required>         
+          <input type="submit" value="Buscar" id="btnBuscar" name="btnBuscar" class="botonBuscar">
+        </form>
+      </section>
+      <hr>
+      <section class="sectionTendencias" id="tendencias">
+          <h2>Las tendencias de hoy</h2>            
+            <div class="contenedorTendencias">
+              <div>
+                <a href="./pages/detalle.html">
+                  <img src="./assets/img/peli1-argylle.jpeg" alt="Poster de Argylle">
+                </a>                                               
+              </div>
+              <div>
+                <img src="./assets/img/peli2-kong.jpeg" alt="Poster de Godzilla y Kong">                           </div>
+              <div>
+                <img src="./assets/img/peli3-ghosbuster.jpeg" alt="Poster de Ghosbuster">                            
+              </div>
+              <div>
+                <img src="./assets/img/peli4-madameweb.jpeg" alt="Poster de Madame Web">                              
+              </div> 
+              <div>
+                <img src="./assets/img/peli5-planetasimios.jpeg" alt="Poster El Reino del Planeta de los Simios">                        
+              </div> 
+              <div>
+                <img src="./assets/img/peli-Oppenheimer.jpeg" alt="Poster de Oppenheimer">            </div> 
+              <div>
+                <img src="./assets/img/peli7-laleyenda.jpeg" alt="Poster de La Leyenda">
+              </div>
+              <div>
+                <img src="./assets/img/peli8-Luca.jpeg" alt="Luca">
+              </div> 
+            </div>
+            <div class="contenedorBotones">
+              <button >Anterior</button>
+              <button >Siguiente</button>
+            </div>                
+    </section>
+    <hr>
+    <section class="sectionAclamadas">
+        <h2>Las más aclamadas</h2>
+        <div class="contenedorAclamadas">
+          <img src="./assets/img/aclamadas1-loqueelvientosellevo.jpeg" alt="Poster de Lo que el Viento se llevó">
+          <img src="./assets/img/aclamadas2-psicosis.jpeg" alt="Poster de Psicosis">
+          <img src="./assets/img/aclamadas3-petcementary.jpeg" alt="Poster de Cementerio ce Animales">
+          <img src="./assets/img/aclamadas4-it.jpeg" alt="Poster de It">
+          <img src="./assets/img/aclamadas5-madmax2.jpeg" alt="Poster de Mad Max">
+          <img src="./assets/img/aclamadas6-elseñordelosanillos.jpeg" alt="Poster de El Señor de los anillos">
+          <img src="./assets/img/aclamadas7-elretornodelrey.jpeg" alt="Poster de El Retorno del Rey">
+          <img src="./assets/img/aclamadas8-alien.jpeg" alt="Poster de Alien">
+          <img src="./assets/img/aclamadas9-titanic.jpeg" alt="Poster de Titanic">
+          <img src="./assets/img/aclamadas10-encuentrocercanos.jpeg" alt="Poster de Encuentros Cercanos del Tercer Tipo">
+          </div>        
+    </section>  
+    
+    </main>
+    <footer class="footer">
+      <nav>
+        <ul>
+          <li>
+            <a href="">Terminos y Condiciones</a>
+          </li>
+          <li>
+            <a href="">Ayuda</a>
+          </li>
+          <li>
+            <a href="">Preguntas Frecuentes</a>
+          </li>
+          <li>
+            <a class="adminpeliculas" href="">Administrador de Peliculas</a>
+          </li>
+            
+        </ul>
+      </nav>
+      <div class="contenedorIconoArriba">
+        <a href="#principal" class="iconoArriba">
+          <i class="fas fa-chevron-circle-up"></i>
+        </a>
+      </div>
+    </footer>
+    
+</body>
+</html>
